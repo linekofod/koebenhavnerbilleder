@@ -9,14 +9,16 @@ import Link from "../components/Link.astro";
   <section
     class="lg:max-w-full lg:mx-5 mb-8 lg:mb-12 lg:grid xl:grid-cols-3 lg:grid-cols-2 lg:gap-8"
   >
-    <img
-      class="w-full aspect-[5/3] xl:object-[0_-100px] object-cover xl:col-span-2"
-      src="../imgs/kobenhavnerbilleder-sten-simons.webp"
-      alt="Billede af bogen Københavnerbilleder"
-    />
+    <div class="xl:col-span-2 overflow-hidden">
+      <img
+        class="w-full aspect-[5/3] xl:object-[0_-100px] object-cover transition-all hover:scale-150 duration-500"
+        src="../imgs/kobenhavnerbilleder-sten-simons.webp"
+        alt="Billede af bogen Københavnerbilleder"
+      />
+    </div>
     <div>
       <div class="mb-6">
-        <h1 class="text-4xl lg:text-5xl font-semibold mb-2 mt-4">
+        <h1 class="text-4xl lg:text-[42px] font-semibold mb-2 mt-4">
           Københavnerbilleder
         </h1>
         <h2 class="text-3xl font-medium mb-1">En guide til hipster foto</h2>
@@ -44,7 +46,7 @@ import Link from "../components/Link.astro";
         </div>
       </div>
       <div class="pulseAnimation">
-        <a href="#køb_nu">
+        <a class="ml-2" href="#køb_nu">
           <Button variant="primary" size="medium">Køb bogen</Button>
         </a>
       </div>
@@ -55,21 +57,27 @@ import Link from "../components/Link.astro";
   <section
     class="lg:mx-5 mx-auto mb-12 grid grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-5"
   >
-    <img
-      class="w-full aspect-[3/2] object-cover"
-      src="../imgs/_6090016.webp"
-      alt=""
-    />
-    <img
-      class="w-full aspect-[3/2] object-cover"
-      src="../imgs/foraar-med-et-agfa-le-box-2021-17.webp"
-      alt=""
-    />
-    <img
-      class="w-full aspect-[3/2] object-cover"
-      src="../imgs/_6090022.webp"
-      alt=""
-    />
+    <div class="overflow-hidden">
+      <img
+        class="w-full aspect-[3/2] object-cover transition-all hover:scale-110 duration-500"
+        src="../imgs/_6090016.webp"
+        alt=""
+      />
+    </div>
+    <div class="overflow-hidden">
+      <img
+        class="w-full aspect-[3/2] object-cover transition-all hover:scale-110 duration-500"
+        src="../imgs/foraar-med-et-agfa-le-box-2021-17.webp"
+        alt=""
+      />
+    </div>
+    <div class="overflow-hidden">
+      <img
+        class="w-full aspect-[3/2] object-cover transition-all hover:scale-110 duration-500"
+        src="../imgs/_6090022.webp"
+        alt=""
+      />
+    </div>
   </section>
 
   <!-- Uddrag af kapitlerne -->
@@ -554,7 +562,7 @@ import Link from "../components/Link.astro";
   </section>
 
   <!-- Køb bogen -->
-  <section class="max-w-fit mx-auto mb-12" id="køb_nu">
+  <section class="max-w-fit mx-auto mb-12 mitelement2" id="køb_nu">
     <h2 class="text-3xl lg:text-4xl font-semibold mb-5">
       Køb Københavnerbilleder nu!
     </h2>
@@ -697,5 +705,11 @@ import Link from "../components/Link.astro";
 
   inView(inviewelement, () => {
     inviewelement.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const inviewelement2 = document.querySelector(".mitelement2");
+
+  inView(inviewelement2, () => {
+    inviewelement2.classList.add("animate__animated", "animate__fadeInUp");
   });
 </script>
