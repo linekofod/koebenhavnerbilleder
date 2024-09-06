@@ -43,9 +43,11 @@ import Link from "../components/Link.astro";
           <p><strong>Pris:</strong> 399.-</p>
         </div>
       </div>
-      <a href="#køb_nu">
-        <Button variant="primary" size="medium">Køb bogen</Button>
-      </a>
+      <div class="pulseAnimation">
+        <a href="#køb_nu">
+          <Button variant="primary" size="medium">Køb bogen</Button>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -154,7 +156,7 @@ import Link from "../components/Link.astro";
 
   <!-- Pressen siger -->
   <section class="bg-[#c8d6d9] mx-[-20px] py-14 mb-12">
-    <div class="mx-5 lg:mx-auto lg:max-w-6xl">
+    <div class="mx-5 lg:mx-auto lg:max-w-6xl mitelement">
       <h2 class="text-3xl lg:text-4xl font-semibold mb-5">Pressen siger</h2>
       <div class="grid gap-8 lg:grid-cols-3 lg:gap-5">
         <div>
@@ -434,66 +436,90 @@ import Link from "../components/Link.astro";
   <section class="lg:max-w-6xl mx-auto mb-12">
     <h2 class="text-3xl lg:text-4xl font-semibold mb-5">Galleri</h2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/amarminoen-med-et-agfa-le-box-11.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/anamorfiske-landskaber-amager-faelled-4.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/foraar-med-et-agfa-lebox-2-20.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/lomo-smena-15.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110-8.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/lomo-smena-20.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110-12.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110-17.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110-24.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/vinter-2021-med-lomo-smena-6.webp"
-        alt=""
-      />
-      <img
-        class="w-full aspect-[2/2] object-cover"
-        src="../imgs/galleri/vinter-2021-med-lomo-smena-17.webp"
-        alt=""
-      />
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/amarminoen-med-et-agfa-le-box-11.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/anamorfiske-landskaber-amager-faelled-4.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/foraar-med-et-agfa-lebox-2-20.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/lomo-smena-15.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110-8.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/lomo-smena-20.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110-12.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110-17.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110-24.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/orestad-til-islands-brygge-pentax-auto-110.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/vinter-2021-med-lomo-smena-6.webp"
+          alt=""
+        />
+      </div>
+      <div class="overflow-hidden">
+        <img
+          class="w-full aspect-[2/2] object-cover transition-all hover:scale-110 duration-500"
+          src="../imgs/galleri/vinter-2021-med-lomo-smena-17.webp"
+          alt=""
+        />
+      </div>
     </div>
   </section>
 
@@ -655,3 +681,21 @@ import Link from "../components/Link.astro";
     </svg>
   </a>
 </MainLayout>
+
+<style>
+  .pulseAnimation {
+    animation: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+</style>
+
+<script>
+  import { inView } from "motion";
+
+  const inviewelement = document.querySelector(".mitelement");
+
+  inView(inviewelement, () => {
+    inviewelement.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+</script>
